@@ -4,3 +4,6 @@
 [submodule "themes/hugo-theme-color-your-world"]
 	path = themes/hugo-theme-color-your-world
 	url = https://gitlab.com/rmaguiar/hugo-theme-color-your-world.git
+[submodule "themes/ananke"]
+	path = themes/ananke
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
