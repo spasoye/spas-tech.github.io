@@ -1,0 +1,41 @@
+baseURL = "https://yourdomain.com/"
+languageCode = "en-us"
+title = "Spas Tech"
+theme = "ananke"
+
+[pagination]
+#pagerSize = 3  this is set low for demonstrating with dummy content. Set to a higher number
+
+[menu]
+  [[menu.main]]
+    url = "about/_index.md"
+    weight = 1
+
+  [[menu.main]]
+    name = "Contact"
+    url = "contact/contact.md"
+    weight = 3
+
+contentDir = "content"
+
+[params]
+custom_css = ["css/custom.css"]
+
+[params.ananke.social.follow]
+networks = [
+  "facebook",
+  "linkedin"
+]
+
+[params.ananke.social.facebook]
+username = "patrick.kollitsch"
+# profilelink = "https://www.facebook.com/patrick.kollitsch"
+
+[params.ananke.social.linkedin]
+username = "patrickkollitsch"
+
+[params.ananke.social.bluesky]
+username = "kollitsch.dev"
+
+[params.ananke.social.wikipedia]
+username = "Hugo_(software)"
