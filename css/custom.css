@@ -1,0 +1,84 @@
+/* Globalni stilovi */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a; /* Vrlo tamno siva */
+    color: #e0e0e0; /* Svijetlo siva za tekst */
+}
+
+header {
+    background-color: #121212; /* Još tamnija siva */
+    color: #4CAF50; /* Zelena */
+    padding: 1rem 0;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: #4CAF50; /* Zelena */
+    text-decoration: none;
+}
+
+section {
+    padding: 2rem;
+    margin: 1rem 0;
+    background-color: #262626; /* Tamno siva */
+    border-radius: 8px;
+}
+
+h2 {
+    color: #4CAF50; /* Zelena */
+}
+
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #121212; /* Još tamnija siva */
+    color: #4CAF50; /* Zelena */
+    margin-top: 2rem;
+}
+
+/* Stil za logo */
+.logo-container {
+    text-align: center; /* Centrira logo */
+    padding: 1rem 0; /* Dodaje prostor iznad i ispod logoa */
+    background-color: #007a00dc; /* Tamna pozadina (prilagodite boju) */
+}
+
+.logo-container img {
+    max-width: 400px; /* Prilagodite veličinu logoa */
+    height: auto; /* Očuva proporcije slike */
+}
+
+.container {
+    max-width: 800px !important; /* Ograničava širinu sadržaja */
+    width: 100%; /* Sprječava širenje */
+    margin: 0 auto !important; /* Centriranje */
+    padding: 20px; /* Dodatni razmak */
+    text-align: left; /* Tekst ostaje poravnat lijevo */
+}
+
+@font-face {
+    font-family: 'science_font';
+    src: url('{{ "fonts/WeirdScienceNbpRegular-qmBr.ttf" | relURL }}') format('truetype');
+}
+
+header h1 {
+    font-family: 'science_font';
+}

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Spas Tech</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on Spas Tech</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About me</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>&lt;p&gt;Welcome to Spas Tech – your partner in embedded firmware development.&lt;/p&gt;&#xA;&lt;p&gt;I’m Ivan Spasić, an embedded firmware developer, graduated from the University of Zagreb, Faculty of Electrical Engineering and Computing with a degree in Electrical Engineering and Information Technology, specializing in embedded systems and firmware development.&lt;/p&gt;&#xA;&lt;p&gt;With years of hands-on experience, I specialize in low-level programming, firmware optimization, and hardware-software integration. My work spans a variety of platforms and technologies, including ESP32, STM32, Nordic Semiconductor and incorporating various software solutions like FreeRTOS, Zephyr, Micropython.&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Contact</title>
+      <link>http://localhost:1313/contact/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/contact/contact/</guid>
+      <description></description>
+    </item>
+  </channel>
+</rss>
