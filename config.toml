@@ -3,13 +3,16 @@ languageCode = "en-us"
 title = "Spas Tech"
 theme = "ananke"
 
-relativeURLs = true
-canonifyURLs = true
+relativeURLs = false
+
+contentDir = "content"
+
+[permalinks]
+  about = "/about/"
+  contact = "/contact/"
 
 [pagination]
 #pagerSize = 3  this is set low for demonstrating with dummy content. Set to a higher number
-
-contentDir = "content"
 
 [menu]
   [[menu.main]]
@@ -29,22 +32,3 @@ contentDir = "content"
 
 [params]
 custom_css = ["css/custom.css"]
-
-[params.ananke.social.follow]
-networks = [
-  "facebook",
-  "linkedin"
-]
-
-[params.ananke.social.facebook]
-username = "patrick.kollitsch"
-# profilelink = "https://www.facebook.com/patrick.kollitsch"
-
-[params.ananke.social.linkedin]
-username = "patrickkollitsch"
-
-[params.ananke.social.bluesky]
-username = "kollitsch.dev"
-
-[params.ananke.social.wikipedia]
-username = "Hugo_(software)"
