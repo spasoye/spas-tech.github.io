@@ -3,20 +3,25 @@ languageCode = "en-us"
 title = "Spas Tech"
 theme = "ananke"
 
+relativeURLs = true
+canonifyURLs = true
+
 [pagination]
 #pagerSize = 3  this is set low for demonstrating with dummy content. Set to a higher number
 
+contentDir = "content"
+
 [menu]
   [[menu.main]]
-    url = "about/_index.md"
+    url = "about/"
     weight = 1
 
   [[menu.main]]
     name = "Contact"
-    url = "contact/contact.md"
-    weight = 3
+    url = "contact/"
+    weight = 2
 
-contentDir = "content"
+
 
 [params]
 custom_css = ["css/custom.css"]
