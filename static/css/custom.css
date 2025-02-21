@@ -82,3 +82,26 @@ footer {
 header h1 {
     font-family: 'science_font';
 }
+
+h1.f1 {
+    background-color: #0e0f0f !important; /* Ensures no background */
+}
+
+/* Target the specific div */
+.flex-l.mt2.mw8.center {
+    background-color: #0e0f0f; /* Tamno siva */
+    padding: 20px; /* Adds padding for better spacing */
+    border-radius: 8px; /* Rounded corners */
+}
+
+/* Align the title to the left */
+.flex-l.mt2.mw8.center header h1.f1 {
+    text-align: left; /* Aligns the title to the left */
+    margin-bottom: 20px; /* Adds space below the title */
+}
+
+/* Ensure the article content has the same background */
+.flex-l.mt2.mw8.center .nested-copy-line-height {
+    background-color: #0e0f0f; /* Tamno siva */
+    color: #e0e0e0; /* Svijetlo siva za tekst */
+}

@@ -5,9 +5,11 @@
 <header class="header">
     <nav>
         <ul>
-            <li><a href="{{ "/about" | relURL }}">About</a></li>
-            <li><a href="{{ "/services" | relURL }}">Services</a></li>
-            <li><a href="{{ "/contact" | relURL }}">Contact</a></li>
+            {{ range .Site.Menus.main }}
+                <li>
+                    <a href="{{ .URL | relURL }}" title="{{ .Name }}">{{ .Name }}</a>
+                </li>
+            {{ end }}
         </ul>
     </nav>
 </header>

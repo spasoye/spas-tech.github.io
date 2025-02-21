@@ -13,13 +13,19 @@ contentDir = "content"
 
 [menu]
   [[menu.main]]
-    url = "about/index.md"
-    weight = 1
+    name = "Home"
+    url = "/"
+    weight = 1  # Lower weight means it appears first
+
+  [[menu.main]]
+    name = "About"
+    url = "/about/"
+    weight = 2
 
   [[menu.main]]
     name = "Contact"
-    url = "contact/index.md"
-    weight = 2
+    url = "/contact/"
+    weight = 3
 
 [params]
 custom_css = ["css/custom.css"]

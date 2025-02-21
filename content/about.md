@@ -1,11 +1,8 @@
----
-title: "About me"
-menu:
-  main:
-    weight: 1
----
-
-Welcome to Spas Tech – your partner in embedded firmware development.
++++
+date = '2025-02-21T16:48:52+01:00'
+draft = true
+title = 'About me'
++++
 
 I’m Ivan Spasić, an embedded firmware developer, graduated from the University of Zagreb, Faculty of Electrical Engineering and Computing with a degree in Electrical Engineering and Information Technology, specializing in embedded systems and firmware development.
 
@@ -18,4 +15,3 @@ Over the years, I’ve worked on a variety of projects, developing IoT solutions
 Whether you need firmware developed from scratch or existing code optimized for better performance, I’m here to help. My goal is to deliver solutions that are stable, efficient, and tailored to your needs.
 
 Bringing hardware to life, one line of code at a time.
-
