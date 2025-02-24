@@ -6,6 +6,8 @@ theme = "ananke"
 
 relativeURLs = false
 
+markup.goldmark.renderer.unsafe = true
+
 contentDir = "content"
 
 [permalinks]

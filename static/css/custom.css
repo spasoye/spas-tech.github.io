@@ -97,6 +97,29 @@ h1.f1 {
     background-color: #0e0f0f !important; /* Ensures no background */
 }
 
+.contact-icons {
+    display: block;
+    justify-content: left;
+    gap: 20px; /* Space between icons */
+    line-gap-override: 50px;
+    margin-top: 20px;
+    flex-wrap: wrap; /* Prevents overflow on small screens */
+}
+
+.contact-icons a {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between icon and text */
+    text-decoration: none;
+    color: white; /* Make text visible */
+    font-weight: bold;
+}
+
+.contact-icons img {
+    width: 24px;
+    height: 24px;
+    filter: invert(1); /* Makes black icons white */
+}
 
 /* Target the specific div */
 .flex-l.mt2.mw8.center {
