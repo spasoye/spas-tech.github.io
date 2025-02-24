@@ -9,7 +9,6 @@ body {
 }
 
 header {
-    background-color: #121212; /* Još tamnija siva */
     color: #4CAF50; /* Zelena */
     padding: 1rem 0;
     text-align: center;
@@ -74,37 +73,30 @@ footer {
     text-align: left; /* Tekst ostaje poravnat lijevo */
 }
 
-@font-face {
-    font-family: 'science_font';
-    src: url('{{ "fonts/WeirdScienceNbpRegular-qmBr.ttf" | relURL }}') format('truetype');
-}
-
 .nav-menu {
-    font-family: 'science_font', sans-serif;
+    font-family: 'Orbitron', sans-serif !important;
 }
 
 .nav-menu a {
-    font-size: 16px;
-    font-weight: bold;
-    color: #4CAF50;
-    text-decoration: none;
+    font-family: 'Orbitron', sans-serif !important;
 }
 
 .nav-menu a:hover {
     color: #45a049;
 }
 
-header h1 {
-    font-family: 'science_font';
+h1, h2, h3, h4, h5, h6, li, footer{
+    font-family: 'Orbitron', sans-serif !important;
+}
+
+li {
+    font-weight: bold;
 }
 
 h1.f1 {
     background-color: #0e0f0f !important; /* Ensures no background */
 }
 
-.f1 {
-    font-family: 'science_font';
-}
 
 /* Target the specific div */
 .flex-l.mt2.mw8.center {
