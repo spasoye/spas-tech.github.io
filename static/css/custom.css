@@ -94,7 +94,7 @@ li {
 }
 
 h1.f1 {
-    background-color: #0e0f0f !important; /* Ensures no background */
+    background-color: #262626 !important; /* Ensures no background */
 }
 
 .contact-icons {
@@ -123,7 +123,7 @@ h1.f1 {
 
 /* Target the specific div */
 .flex-l.mt2.mw8.center {
-    background-color: #0e0f0f; /* Tamno siva */
+    background-color: #262626; /* Tamno siva */
     padding: 20px; /* Adds padding for better spacing */
     border-radius: 8px; /* Rounded corners */
 }
@@ -136,6 +136,6 @@ h1.f1 {
 
 /* Ensure the article content has the same background */
 .flex-l.mt2.mw8.center .nested-copy-line-height {
-    background-color: #0e0f0f; /* Tamno siva */
+    background-color: #262626; /* Tamno siva */
     color: #e0e0e0; /* Svijetlo siva za tekst */
 }

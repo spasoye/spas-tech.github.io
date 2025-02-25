@@ -6,7 +6,14 @@ title = 'Contact'
 
 Feel free to reach out to me on any of the following platforms:
 
+
+
 <div class="contact-icons">
+    <a href="https://github.com/spasoye" target="_blank">
+        <img src="/images/github.svg" alt="Github">
+        <span>Github</span>
+    </a>
+    <br>
     <a href="https://www.facebook.com/profile.php?id=61572538727928" target="_blank">
         <img src="/images/facebook.svg" alt="Facebook">
         <span>Facebook</span>
@@ -22,7 +29,7 @@ Feel free to reach out to me on any of the following platforms:
         <span>Discord</span>
     </a>
     <br>
-    <a href="mailto:your@email.com">
+    <a href="mailto:ivan@spas-tech.hr">
         <img src="/images/email.svg" alt="Email">
         <span>ivan@spas-tech.hr</span>
     </a>
