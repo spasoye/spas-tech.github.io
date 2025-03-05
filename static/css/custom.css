@@ -139,3 +139,13 @@ h1.f1 {
     background-color: #262626; /* Tamno siva */
     color: #e0e0e0; /* Svijetlo siva za tekst */
 }
+
+.cv-link {
+    text-decoration: none;
+    color: #45a049;
+    font-weight: bold; /* (Opcionalno) naglasi link */
+}
+
+.cv-link:hover {
+    color: #cc5500; /* Boja kada prijeđeš mišem */
+}

@@ -16,7 +16,9 @@ I’m a strong advocate for FOSS (Free and Open Source Software), and much of my
 
 Whether you need firmware developed from scratch, existing code optimized for better performance, or guidance on integrating cutting-edge technologies, I’m here to help. My goal is to deliver solutions that are stable, efficient, and tailored to your unique needs.
 
-## TL;DR
-[Download my resume](/docs/resume.pdf)
+<br>
+
+<a href="/docs/resume.pdf" class="cv-link">Download CV</a>
+
 
 
