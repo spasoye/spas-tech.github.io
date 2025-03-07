@@ -33,5 +33,10 @@ contentDir = "content"
     url = "/contact/"
     weight = 3
 
+  [[menu.main]]
+    name = "Business Info"
+    url = "/business_info/"
+    weight = 4
+
 [params]
 custom_css = ["css/custom.css"]
