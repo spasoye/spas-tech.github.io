@@ -34,7 +34,7 @@ contentDir = "content"
     weight = 3
 
   [[menu.main]]
-    name = "Business Info"
+    name = "Biz Info"
     url = "/business_info/"
     weight = 4
 

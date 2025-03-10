@@ -6,11 +6,12 @@ body {
     padding: 0;
     background-color: #1a1a1a; /* Vrlo tamno siva */
     color: #e0e0e0; /* Svijetlo siva za tekst */
+    overflow-x: hidden;
 }
 
 header {
     color: #4CAF50; /* Zelena */
-    padding: 1rem 0;
+    padding: 2px 0px;
     text-align: center;
 }
 
@@ -19,9 +20,13 @@ header h1 {
     font-size: 2.5rem;
 }
 
+
 nav ul {
+    margin: 0 ;
     list-style: none;
     padding: 0;
+    gap: 5px; /* Reduce space between items */
+    justify-content: center; /* Center the items */
 }
 
 nav ul li {
@@ -55,19 +60,38 @@ footer {
 
 /* Stil za logo */
 .logo-container {
+    display: flex;
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center; /* Centers it vertically if needed */
+    max-width: 100%; /* Ensures it doesn’t overflow */
+    width: auto;
+    overflow: hidden; /* Prevents any part from spilling over */
     text-align: center; /* Centrira logo */
     padding: 1rem 0; /* Dodaje prostor iznad i ispod logoa */
     background-color: #007a00dc; /* Tamna pozadina (prilagodite boju) */
 }
 
+@media (max-width: 768px) {
+    .logo-container img {
+        max-width: 80%; /* Adjust size for smaller screens */
+    }
+
+    .container {
+        max-width: 90%; /* Allows better spacing on smaller screens */
+        padding: 10px;
+    }
+}
+
+
 .logo-container img {
-    max-width: 400px; /* Prilagodite veličinu logoa */
+    max-width: 250px; /* Prilagodite veličinu logoa */
     height: auto; /* Očuva proporcije slike */
+    display: block;
 }
 
 .container {
-    max-width: 800px !important; /* Ograničava širinu sadržaja */
-    width: 100%; /* Sprječava širenje */
+    /* display: flex; */
+    max-width: 800px; /* Sprječava širenje */
     margin: 0 auto !important; /* Centriranje */
     padding: 20px; /* Dodatni razmak */
     text-align: left; /* Tekst ostaje poravnat lijevo */
@@ -82,7 +106,7 @@ footer {
 }
 
 .nav-menu a:hover {
-    color: #45a049;
+    color: #cc5500;
 }
 
 h1, h2, h3, h4, h5, h6, li, footer{
