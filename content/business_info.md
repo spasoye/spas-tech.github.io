@@ -1,8 +1,8 @@
 ---
-title: "Business Structure"
 date: 2024-03-21
 draft: false
 ---
+# Business Structure
 
 I am located in Zagreb, Croatia. I am available for both local and remote 
 projects, ensuring flexibility to meet your needs.

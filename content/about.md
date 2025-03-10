@@ -1,8 +1,9 @@
 +++
 date = '2025-02-21T16:48:52+01:00'
 draft = false
-title = 'About me'
 +++
+
+# About me
 
 Hi, I’m Ivan Spasić, an embedded firmware developer with a passion for creating efficient, reliable, and innovative solutions. I graduated from the University of Zagreb, Faculty of Electrical Engineering and Computing, with a degree in Electrical Engineering and Information Technology, specializing in embedded systems and firmware development.
 
