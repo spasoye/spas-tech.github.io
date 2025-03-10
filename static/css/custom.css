@@ -9,17 +9,33 @@ body {
     overflow-x: hidden;
 }
 
-header {
-    color: #4CAF50; /* Zelena */
-    padding: 2px 0px;
+.header {
+    position: relative; /* Ensures child elements are positioned relative to this */
+    padding: 0; /* Reduce unnecessary padding */
+}
+
+.header nav {
+    position: absolute;
+    top: 5;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.2); /* Semi-transparent background */
+    z-index: 10; /* Ensures it's above the logo */
     text-align: center;
+}
+
+.logo-container {
+    position: relative;
+    z-index: 5; /* Keeps it below the nav */
+    text-align: center; /* Centers the logo */
+    padding: 2rem 0;
+    padding-bottom: 5px;
 }
 
 header h1 {
     margin: 0;
     font-size: 2.5rem;
 }
-
 
 nav ul {
     margin: 0 ;
@@ -67,7 +83,6 @@ footer {
     width: auto;
     overflow: hidden; /* Prevents any part from spilling over */
     text-align: center; /* Centrira logo */
-    padding: 1rem 0; /* Dodaje prostor iznad i ispod logoa */
     background-color: #007a00dc; /* Tamna pozadina (prilagodite boju) */
 }
 
@@ -84,7 +99,7 @@ footer {
 
 
 .logo-container img {
-    max-width: 250px; /* Prilagodite veličinu logoa */
+    max-width: 220px; /* Prilagodite veličinu logoa */
     height: auto; /* Očuva proporcije slike */
     display: block;
 }
