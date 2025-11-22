@@ -5,3 +5,13 @@
 <script>
     document.getElementById("current-year").textContent = new Date().getFullYear();
 </script>
+
+<style>
+  html, body { height: 100%; }
+  body {
+    display: flex;
+    flex-direction: column;
+  }
+  main { flex: 1 0 auto; }           /* pushes footer down */
+  footer { flex-shrink: 0; }         /* footer stays at bottom */
+</style>
