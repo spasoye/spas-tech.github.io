@@ -1,11 +1,8 @@
 ---
 title: "Projects"
-description: "Explore my work and open-source contributions."
 ---
 
-{{< project-grid >}}
+## Featured Projects
 
-
-
-
-
+- **[ESP32 HASS Doorbell](/projects/home_assistant_doorbell)**  
+  Wireless doorbell with OV2640 camera, BME280 sensor, and instant Home Assistant notifications via MQTT. Live streaming, auto-discovery.
