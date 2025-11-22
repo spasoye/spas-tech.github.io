@@ -37,7 +37,25 @@
         padding: 8px 13px;
       }
       .github-readme a { color: #58a6ff; }
-      .github-readme h1, .github-readme h2, .github-readme h3 { border-bottom: none; }
+      .github-readme h1, .github-readme h2, .github-readme h3 { 
+        border-bottom: none;
+        color: #4CAF50;
+      }
+      /* PARAGRAPH FONT — change font family, size, line-height, color */
+      .github-readme p {
+        font-family: "Inter", system-ui, sans-serif;   /* ← change font here */
+        font-size: 1.05rem;
+        line-height: 1.7;
+        color: #e2e8f0;                                /* ← change text color */
+        margin: 1.2rem 0;
+      }
+      .github-readme ul li,
+      .github-readme ol li::marker {
+        color: #e2e8f0;
+        font-family: inherit !important;      /* ← THIS LINE does the magic */
+        font-weight: inherit !important;
+        font-size: inherit !important;
+      }
     </style>
 
     {{/* Optional: force dark-mode code highlighting */}}
