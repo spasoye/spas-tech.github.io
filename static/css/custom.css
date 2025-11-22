@@ -65,6 +65,7 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     gap: 2rem;
     white-space: nowrap;
 }
@@ -78,7 +79,7 @@ nav ul li a {
     color: #4CAF50;
     text-decoration: none;
     font-family: 'Orbitron', sans-serif !important;
-    font-size: 1.1rem;
+    font-size: 1rem;
 }
 
 nav ul li a:hover {
@@ -96,6 +97,11 @@ h2 { color: #4CAF50; }
 
 li { font-weight: bold; }
 
+h1, h2, h3, h4, h5, h6 {
+    word-break: keep-all !important;     /* prevents mid-word breaks */
+    hyphens: none !important;            /* disables hyphenation */
+    overflow-wrap: normal !important;    /* old name for word-break */
+}
 /* ———————————————————— LAYOUT ———————————————————— */
 .container {
     max-width: 800px;
@@ -158,7 +164,56 @@ footer {
 @media (max-width: 800px) {
     .logo-container img { max-width: 180px; }
     nav ul { gap: 1rem; }
-    .container { max-width: 90%; padding: 15px; }
+    .container { max-width: 100%; padding: 2px; }
+    h1 { font-size: 1.7rem !important; }
+    h2 { font-size: 1.5rem !important; }
+    h3 { font-size: 1.3rem !important; }
+    .logo-container {
+        padding: 30px 1rem 5px;
+    }
+
+    nav ul {
+        gap: 0.8rem;
+        padding: 0 0.5rem;
+    }
+    nav ul li a {
+        font-size: 0.9rem;
+    }
+
+    /* .container {
+        padding: 15px;
+        max-width: 100%;
+    } */
+
+    section {
+        padding: 1.5rem;
+        margin: 1rem 0;
+    }
+
+    .flex-l.mt2.mw8.center,
+    .flex-l.mt2.mw8.center .nested-copy-line-height,
+    .flex-l.mt2.mw8.center article {
+        margin: 0 0.8rem !important;     /* tiny side margin */
+        padding: 1.4rem !important;     /* comfortable inner padding */
+        max-width: none !important;     /* removes 800px cap */
+    }
+
+    /* Paragraphs, lists, code, images – full width */
+    .flex-l.mt2.mw8.center p,
+    .flex-l.mt2.mw8.center ul,
+    .flex-l.mt2.mw8.center ol,
+    .flex-l.mt2.mw8.center pre,
+    .flex-l.mt2.mw8.center img,
+    .flex-l.mt2.mw8.center table {
+        max-width: 100% !important;
+        width: 100% !important;
+    }
+
+    /* Optional: slightly larger paragraph text on phone */
+    .flex-l.mt2.mw8.center p {
+        font-size: 1.05rem !important;
+        line-height: 1.65 !important;
+    }
 }
 /* ——— FIX: Prevent header/logo shrink on long pages ——— */
 body.has-page-content .header,
