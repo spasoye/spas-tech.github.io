@@ -1,0 +1,40 @@
+{{ $pages := where site.Pages "Section" "projects" }}
+{{ $pages = where $pages "File.BaseFileName" "!=" "projects" }} {{/* exclude the list page itself */}}
+
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 my-12">
+  {{ range $pages }}
+    <a href="{{ .Permalink }}" class="group block">
+      <div class="bg-white dark:bg-gray-900 rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300">
+        
+        {{/* Hero image */}}
+        {{ if .Params.hero }}
+          <img src="{{ .Params.hero | relURL }}" alt="{{ .Title }}" class="w-full h-56 object-cover">
+        {{ else }}
+          <div class="bg-gradient-to-br from-blue-500 to-purple-600 h-56 flex items-center justify-center">
+            <span class="text-white text-3xl font-bold">{{ .Title }}</span>
+          </div>
+        {{ end }}
+
+        <div class="p-6">
+          <h3 class="text-2xl font-bold text-gray-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition">
+            {{ .Title }}
+          </h3>
+          <p class="mt-3 text-gray-600 dark:text-gray-300">
+            {{ .Summary }}
+          </p>
+
+          {{/* Tags */}}
+          {{ if .Params.tags }}
+            <div class="mt-4 flex flex-wrap gap-2">
+              {{ range .Params.tags }}
+                <span class="px-3 py-1 text-xs font-medium bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full">
+                  {{ . }}
+                </span>
+              {{ end }}
+            </div>
+          {{ end }}
+        </div>
+      </div>
+    </a>
+  {{ end }}
+</div>

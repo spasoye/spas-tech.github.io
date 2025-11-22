@@ -1,0 +1,47 @@
+{{ $user   := .Get "user" | default "spasoye" }}
+{{ $repo   := .Get "repo" }}
+{{ $branch := .Get "branch" | default "master" }}
+
+{{ if not $repo }}{{ return }}{{ end }}
+
+{{ $base := printf "https://raw.githubusercontent.com/%s/%s/%s" $user $repo $branch }}
+{{ $url  := printf "%s/README.md" $base }}
+
+{{ with resources.GetRemote $url (dict "headers" (dict "User-Agent" "Hugo")) }}
+  {{ with .Content }}
+    {{ $fixed := . | replaceRE `!\[([^\]]*)\]\(([^)]+)\)` (printf `![$1](%s/$2?raw=true)` $base) }}
+    {{ $html  := $fixed | $.Page.RenderString (dict "markup" "markdown") }}
+
+    <div class="github-readme markdown-body">
+      {{ $html | safeHTML }}
+    </div>
+
+    {{/* GitHub’s exact markdown CSS (2025 version) */}}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.1/github-markdown.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
+
+    <style>
+      .github-readme {
+        background: var(--color-canvas-default, #0d1117);
+        color: var(--color-fg-default, #c9d1d9);
+        padding: 2rem;
+        border-radius: 12px;
+        margin: 2rem 0;
+        overflow-x: auto;
+      }
+      .github-readme img { max-width: 100%; height: auto; border-radius: 8px; }
+      .github-readme pre, .github-readme code { border-radius: 6px; }
+      .github-readme table { border-collapse: collapse; width: 100%; }
+      .github-readme table th, .github-readme table td {
+        border: 1px solid #30363d;
+        padding: 8px 13px;
+      }
+      .github-readme a { color: #58a6ff; }
+      .github-readme h1, .github-readme h2, .github-readme h3 { border-bottom: none; }
+    </style>
+
+    {{/* Optional: force dark-mode code highlighting */}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
+  {{ end }}
+{{ end }}
