@@ -1,8 +1,9 @@
 ---
 title: "HASS Doorbell – ESP32 Camera + Home Assistant"
 date: 2025-11-21
+hide_title: true
 summary: "Cheap wireless doorbell with live streaming, BME280 sensor, MQTT autodiscovery"
-tags: ["esp32", "micropython", "home-assistant", "iot"]
+tags: ["esp32", "micropython", "home-assistant", "iot", "mqtt"]
 github: "yourusername/esp32_HA_doorbell"
 ---
 

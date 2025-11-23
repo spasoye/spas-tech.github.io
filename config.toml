@@ -34,8 +34,8 @@ contentDir = "content"
     weight = 3
 
   [[menu.main]]
-    name = "Biz Info"
-    url = "/business_info/"
+    name = "Tags"
+    url = "/tags/"
     weight = 4
 
   [[menu.main]]
