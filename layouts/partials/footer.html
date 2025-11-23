@@ -15,3 +15,27 @@
   main { flex: 1 0 auto; }           /* pushes footer down */
   footer { flex-shrink: 0; }         /* footer stays at bottom */
 </style>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  // Only run on individual project pages (not the list page)
+  if (window.location.pathname.startsWith("/projects/") && 
+      !window.location.pathname.endsWith("/projects/") &&
+      window.location.pathname !== "/projects/") {
+
+    // Target the logo container (your big green bar with logo)
+    const logoContainer = document.querySelector(".logo-container");
+
+    if (logoContainer) {
+      // Get its full height including padding
+      const logoHeight = logoContainer.offsetHeight;
+
+      // Smooth scroll past the entire logo container + a little breathing room
+      window.scrollTo({
+        top: logoHeight + 20,        // +20px extra so it's not glued
+        behavior: "smooth"
+      });
+    }
+  }
+});
+</script>
