@@ -1,41 +1,64 @@
 {{ define "main" }}
 <div class="container">
 
-  <!-- Tag pill with background – left aligned, easy size control -->
-  <div class="container ">
-    <div class="dib pa2 ph4 br-pill" style="
+  <!-- Tag pill – fixed word-wrap + proper spacing -->
+  <div class="pv4">
+    <div class="dib pa3 ph5 br-pill" style="
+      background:none;
       font-family:'Orbitron',sans-serif;
-      font-size:2rem;           <!-- ← CHANGE THIS: 2rem, 2.6rem, 3rem… -->
-      line-height:1;
+      font-size:2rem;
+      line-height:1.2;
       font-weight:bold;
+      word-wrap-wrap:break-word;        /* ← forces long tags to wrap */
+      max-width:100%;                 /* ← prevents overflow */
     ">
-      <span style="color:#white;">Tag:</span>
+      <span style="color:#ffffff;">Tag:</span>
       <span style="color:#4CAF50;"> {{ .Title | replaceRE "-" " " | title }}</span>
-      <small style="color:#888; font-size:.8rem; display:block; margin-top:0rem;">
+      
+      <small style="
+        color:#888; 
+        font-size:0.8rem; 
+        display:block; 
+        margin-top:4px;
+        line-height:1.3;
+        word-wrap:break-word;
+      ">
         <i>All the articles with the tag "{{ .Title | replaceRE "-" " " | lower }}"</i>
       </small>
     </div>
   </div>
 
-  <!-- Project cards – clean, left-aligned, full width -->
-  
+  <!-- Project cards – perfect margins + wrapping -->
+  <div class="ph3 ph5-l">
     {{ range .Pages }}
-    <div class="mb4 pa4 br2" style="background:#262626; border-radius:5px;">
-      <h2 class="f4 fw6 ma0 mb3">
-        <a href="{{ .Permalink }}" 
-           style="color:#4CAF50; font-family:'Orbitron',sans-serif; text-decoration:none;margin-left: 0.5rem;margin-right: 0.5rem;">
+    <div class="mb4 pa4 br2" style="background:#262626; border-radius:8px; word-wrap:break-word;">
+      <h2 class="f4 fw6 ma0 mb3 lh-title" style="word-wrap:break-word;">
+        <a href="{{ .Permalink }}"
+           style="
+             color:#4CAF50;
+             font-family:'Orbitron',sans-serif;
+             text-decoration:none;
+             display:block;
+             padding:0 0.75rem;
+           ">
           {{ .Title }}
         </a>
       </h2>
-      <p class="gray f6 lh-copy ma0" style="margin-left: 0.5rem;">{{ .Summary | truncate 160 }}</p>
+      
+      <p class="gray f6 lh-copy ma0" style="
+        padding:0 0.75rem;
+        word-wrap:break-word;
+        overflow-wrap:break-word;
+      ">
+        {{ .Summary | truncate 180 }}
+      </p>
     </div>
     {{ end }}
 
     {{ if not .Pages }}
-    <p class="gray i">No projects with this tag yet.</p>
+    <p class="gray i ph3">No projects with this tag yet.</p>
     {{ end }}
-
+  </div>
 
 </div>
 {{ end }}
-
