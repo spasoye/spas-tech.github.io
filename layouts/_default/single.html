@@ -1,8 +1,10 @@
 {{ define "main" }}
 <div class="container">
+    {{ if not .Params.hide_title }}
     <h1 class="page-title">{{ .Title }}</h1>
+    {{ end }}
     <article class="page-content">
         {{ .Content }}
     </article>
-</div>
+    </div>
 {{ end }}
