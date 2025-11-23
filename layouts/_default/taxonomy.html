@@ -1,0 +1,41 @@
+{{ define "main" }}
+<div class="container">
+
+  <!-- Tag pill with background – left aligned, easy size control -->
+  <div class="container ">
+    <div class="dib pa2 ph4 br-pill" style="
+      font-family:'Orbitron',sans-serif;
+      font-size:2rem;           <!-- ← CHANGE THIS: 2rem, 2.6rem, 3rem… -->
+      line-height:1;
+      font-weight:bold;
+    ">
+      <span style="color:#white;">Tag:</span>
+      <span style="color:#4CAF50;"> {{ .Title | replaceRE "-" " " | title }}</span>
+      <small style="color:#888; font-size:.8rem; display:block; margin-top:0rem;">
+        <i>All the articles with the tag "{{ .Title | replaceRE "-" " " | lower }}"</i>
+      </small>
+    </div>
+  </div>
+
+  <!-- Project cards – clean, left-aligned, full width -->
+  
+    {{ range .Pages }}
+    <div class="mb4 pa4 br2" style="background:#262626; border-radius:5px;">
+      <h2 class="f4 fw6 ma0 mb3">
+        <a href="{{ .Permalink }}" 
+           style="color:#4CAF50; font-family:'Orbitron',sans-serif; text-decoration:none;margin-left: 0.5rem;margin-right: 0.5rem;">
+          {{ .Title }}
+        </a>
+      </h2>
+      <p class="gray f6 lh-copy ma0" style="margin-left: 0.5rem;">{{ .Summary | truncate 160 }}</p>
+    </div>
+    {{ end }}
+
+    {{ if not .Pages }}
+    <p class="gray i">No projects with this tag yet.</p>
+    {{ end }}
+
+
+</div>
+{{ end }}
+

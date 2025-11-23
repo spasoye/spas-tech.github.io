@@ -1,0 +1,25 @@
+<!-- layouts/shortcodes/tagcloud.html – calm, on-brand, no rainbow -->
+<div class="tagcloud tc pv4">
+  {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
+    <a href="/tags/{{ $name | urlize }}/" 
+       class="link dib pa2 ph3 pv2 mb3 mr2 br-pill ba bw1"
+       style="background:#262626;
+              padding: 0.5rem 1rem; 
+              color:#4CAF50; 
+              border-color:#4CAF50;
+              text-decoration:none;
+              font-family:'Orbitron',sans-serif;
+              display: inline-block;
+              border-radius:10px;
+              transition:0.2s;">
+      {{ replace $name "-" " " | title }}
+    </a>
+  {{ end }}
+</div>
+
+<style>
+  .tagcloud a:hover {
+    background:#4CAF50 !important;
+    color:#000 !important;
+  }
+</style>
