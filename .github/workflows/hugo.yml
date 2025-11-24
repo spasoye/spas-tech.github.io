@@ -31,7 +31,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.128.0
+      HUGO_VERSION: 0.136.5
     steps:
       - name: Install Hugo CLI
         run: |
@@ -55,6 +55,7 @@ jobs:
         run: |
           hugo \
             --minify \
+            --gc \
             --baseURL "https://spasoye.github.io/spas-tech.github.io/"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
