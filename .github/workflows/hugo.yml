@@ -55,8 +55,7 @@ jobs:
         run: |
           hugo \
             --minify \
-            --gc \
-            --baseURL "https://spasoye.github.io/spas-tech.github.io/"
+            --gc 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
