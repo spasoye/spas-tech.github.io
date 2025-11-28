@@ -1,17 +1,23 @@
 <!-- layouts/shortcodes/tagcloud.html – calm, on-brand, no rainbow -->
-<div class="tagcloud tc pv4">
+<div class="tagcloud tc pv5">
   {{ range $name, $taxonomy := .Site.Taxonomies.tags }}
     <a href="/tags/{{ $name | urlize }}/" 
-       class="link dib pa2 ph3 pv2 mb3 mr2 br-pill ba bw1"
-       style="background:#262626;
-              padding: 0.5rem 1rem; 
-              color:#4CAF50; 
-              border-color:#4CAF50;
-              text-decoration:none;
-              font-family:'Orbitron',sans-serif;
-              display: inline-block;
-              border-radius:10px;
-              transition:0.2s;">
+       class="link dib mb3 mr3"  
+       style="
+         background:#262626;
+         color:#4CAF50;
+         {{/*  border:2px solid #4CAF50;  */}}
+         padding:0.65rem 1.4rem;
+         border-radius:12px;
+         text-decoration:none;
+         font-family:'Orbitron',sans-serif;
+         font-weight:bold;
+         font-size:1.1rem;
+         display:inline-block;
+         transition:all 0.2s ease;
+       "
+       onmouseover="this.style.background='#4CAF50'; this.style.color='#000';"
+       onmouseout="this.style.background='#262626'; this.style.color='#4CAF50';">
       {{ replace $name "-" " " | title }}
     </a>
   {{ end }}
@@ -21,5 +27,16 @@
   .tagcloud a:hover {
     background:#4CAF50 !important;
     color:#000 !important;
+  }
+</style>
+
+<!-- Optional: make it wrap nicely on small screens -->
+<style>
+  @media (max-width: 600px) {
+    .tagcloud a {
+      margin-bottom: 0.75rem !important;
+      margin-right: 0.75rem !important;
+      font-size: 1rem !important;
+    }
   }
 </style>
