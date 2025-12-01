@@ -6,7 +6,7 @@
     <div class="dib pa3 ph5 br-pill" style="
       background:none;
       font-family:'Orbitron',sans-serif;
-      font-size:2rem;
+      font-size:1.7rem;
       line-height:1.2;
       font-weight:bold;
       word-wrap-wrap:break-word;        /* ← forces long tags to wrap */
@@ -31,7 +31,7 @@
   <!-- Project cards – perfect margins + wrapping -->
   <div class="ph3 ph5-l">
     {{ range .Pages }}
-    <div class="mb4 pa4 br2" style="background:#0d1117; border-radius:8px; word-wrap:break-word;">
+    <div class="mb4 pa4 br2" style="background:#0d1117; border-radius:8px; word-wrap:break-word;padding-bottom: 0.2rem;">
       <h2 class="f4 fw6 ma0 mb3 lh-title" style="word-wrap:break-word;">
         <a href="{{ .Permalink }}"
            style="
@@ -40,12 +40,14 @@
              text-decoration:none;
              display:block;
              padding:0 0.75rem;
+             padding-top:0.2rem;
            ">
           {{ .Title }}
         </a>
       </h2>
       
       <p class="gray f6 lh-copy ma0" style="
+        font-family: 'Orbitron', sans-serif;
         padding:0 0.75rem;
         word-wrap:break-word;
         overflow-wrap:break-word;

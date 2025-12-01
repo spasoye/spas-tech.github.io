@@ -1,0 +1,44 @@
+<div class="ph3 ph5-l pv5">
+
+  {{ range where .Site.RegularPages "Section" "projects" }}
+    {{ if .Params.featured }}
+
+      <div class="mb4 pa4 br2" style="
+        background:#0d1117;
+        border-radius:8px;
+        word-wrap:break-word;
+        padding-bottom: 0.5rem;
+      ">
+        <h2 class="f4 fw6 ma0 mb3 lh-title" style="word-wrap:break-word;">
+          <a href="{{ .Permalink }}"
+             style="
+               color:#4CAF50;
+               font-family:'Orbitron',sans-serif;
+               text-decoration:none;
+               display:block;
+               padding:0 0.75rem;
+               padding-top:0.2rem;
+             ">
+            {{ .Title }}
+          </a>
+        </h2>
+        
+        <p class="gray f6 lh-copy ma0" style="
+          font-family: 'Orbitron', sans-serif;
+          padding:0 0.75rem;
+          word-wrap:break-word;
+          overflow-wrap:break-word;
+          line-height: 1.6;
+          color: #ffffff;
+        ">
+          {{ .Summary | truncate 180 }}
+        </p>
+      </div>
+
+    {{ end }}
+  {{ end }}
+
+  {{ if not (where (where .Site.RegularPages "Section" "projects") "Params.featured" true) }}
+    <p class="gray i ph3">No featured projects yet.</p>
+  {{ end }}
+</div>
