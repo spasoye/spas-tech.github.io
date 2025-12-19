@@ -9,14 +9,25 @@
 
 {{ with resources.GetRemote $url (dict "headers" (dict "User-Agent" "Hugo")) }}
   {{ with .Content }}
-    {{ $fixed := . | replaceRE `!\[([^\]]*)\]\(([^)]+)\)` (printf `![$1](%s/$2?raw=true)` $base) }}
+    {{/* Fix markdown images - match any path that doesn't start with http:// or https:// */}}
+    {{ $fixed := . | replaceRE `!\[([^\]]*)\]\(([^:)]+)\)` (printf `![$1](%s/$2?raw=true)` $base) }}
+    
+    {{/* Restore markdown images that were actually http/https */}}
+    {{ $fixed = $fixed | replaceRE (printf `%s/(https?://[^)]+)` $base) `$1` }}
+    
+    {{/* Fix HTML img tags with relative src paths - now allows spaces in the path */}}
+    {{ $fixed = $fixed | replaceRE `(<img[^>]+src=")([^":]+)\s*("[^>]*>)` (printf `${1}%s/${2}?raw=true${3}` $base) }}
+    
+    {{/* Restore HTML img tags that were actually http/https */}}
+    {{ $fixed = $fixed | replaceRE (printf `src="%s/(https?://[^"]+\?raw=true)"` $base) `src="$1"` }}
+    
     {{ $html  := $fixed | $.Page.RenderString (dict "markup" "markdown") }}
 
     <div class="github-readme markdown-body">
       {{ $html | safeHTML }}
     </div>
 
-    {{/* GitHub’s exact markdown CSS (2025 version) */}}
+    {{/* GitHub's exact markdown CSS (2025 version) */}}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.5.1/github-markdown.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/github-dark.min.css">
 
@@ -43,16 +54,16 @@
       }
       /* PARAGRAPH FONT — change font family, size, line-height, color */
       .github-readme p {
-        font-family: "Inter", system-ui, sans-serif;   /* ← change font here */
+        font-family: "Inter", system-ui, sans-serif;
         font-size: 1.05rem;
         line-height: 1.7;
-        color: #e2e8f0;                                /* ← change text color */
+        color: #e2e8f0;
         margin: 1.2rem 0;
       }
       .github-readme ul li,
       .github-readme ol li::marker {
         color: #e2e8f0;
-        font-family: inherit !important;      /* ← THIS LINE does the magic */
+        font-family: inherit !important;
         font-weight: inherit !important;
         font-size: inherit !important;
       }
