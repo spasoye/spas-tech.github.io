@@ -43,4 +43,5 @@ contentDir = "content"
     weight = 5
 
 [params]
-custom_css = ["css/custom.css"]
+  custom_css = ["css/custom.css"]
+  favicon = "/static/favicon.ico"
