@@ -7,6 +7,6 @@ tags: ["esp32", "micropython", "home-assistant", "iot", "mqtt"]
 github: "spasoye/esp32_HASS_doorbell"
 ---
 
-{{< github-readme user="spasoye" repo="esp32_HASS_doorbell" >}}
+{{< github-readme user="spasoye" repo="home-assistant_camera_doorbell" >}}
 
 
